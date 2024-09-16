@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { StaticImageData } from 'next/image';
 
 export const HeroParallax = ({
   products,
@@ -16,7 +17,7 @@ export const HeroParallax = ({
   products: {
     title: string;
     link: string;
-    thumbnail: string;
+    thumbnail: string | StaticImageData; // Accept both string and StaticImageData
   }[];
 }) => {
   const firstRow = products.slice(0, 5);
@@ -123,7 +124,7 @@ export const ProductCard = ({
   product: {
     title: string;
     link: string;
-    thumbnail: string;
+    thumbnail: string | StaticImageData; // Accept both string and StaticImageData
   };
   translate: MotionValue<number>;
 }) => {
