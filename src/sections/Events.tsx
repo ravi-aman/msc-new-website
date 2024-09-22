@@ -8,9 +8,9 @@ import events4 from "@/assets/events4.jpg";
 import events5 from "@/assets/events5.jpg";
 import events6 from "@/assets/events6.jpg";
 
-
 export function Events() {
     const cards = data.map((card, index) => (
+        // Pass the card object directly
         <Card key={index} card={card} index={index} />
     ));
 
@@ -43,7 +43,7 @@ const DummyContent = () => {
                             thought.
                         </p>
                         <Image
-                            src="/assets/macbook.png" // Ensure the file is in the public directory
+                            src="/assets/macbook.png"
                             alt="Macbook mockup from Aceternity UI"
                             height={500}
                             width={500}
@@ -60,37 +60,37 @@ const data = [
     {
         category: "Artificial Intelligence",
         title: "You can do more with AI.",
-        src: events6,
+        src: events6, // This is StaticImageData
         content: <DummyContent />,
     },
     {
         category: "Productivity",
         title: "Enhance your productivity.",
-        src: events2,
+        src: events2, // This is StaticImageData
         content: <DummyContent />,
     },
     {
         category: "Product",
         title: "Launching the new Apple Vision Pro.",
-        src: events3,
+        src: events3, // This is StaticImageData
         content: <DummyContent />,
     },
     {
         category: "Product",
         title: "Maps for your iPhone 15 Pro Max.",
-        src: events4,
+        src: events4, // This is StaticImageData
         content: <DummyContent />,
     },
     {
         category: "iOS",
         title: "Photography just got better.",
-        src: events5,
+        src: events5, // This is StaticImageData
         content: <DummyContent />,
     },
     {
         category: "Hiring",
         title: "Hiring for a Staff Software Engineer",
-        src: events6,
+        src: events6, // This is StaticImageData
         content: <DummyContent />,
     },
 ];
